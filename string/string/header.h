@@ -9,7 +9,7 @@ public:
 public:
 	String() 
 	{
-		this->name = "default";
+		this->name = "";
 	}
 	String(char* name)
 	{
@@ -19,6 +19,11 @@ public:
 	void getName() 
 	{
 		std::cout << "String  = " << this->name << std::endl;
+	}
+	bool checkString() 
+	{
+		if (this->name == "") return true;
+		else return false;
 	}
 };
 #endif

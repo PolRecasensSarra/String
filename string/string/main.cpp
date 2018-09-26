@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 #include "header.h"
 
 
@@ -12,5 +13,11 @@ void main() {
 	b.getName();
 	c.getName();
 	d.getName();
+	
+	if (a.checkString())
+	{
+		c = "bye";
+		c.getName();
+	}
 	system("pause");
 }
