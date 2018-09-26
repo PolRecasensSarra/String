@@ -5,25 +5,26 @@
 
 class String {
 public:
-	char* name;
+	const char* name;
 public:
-	String() 
+	String() {};
+	String(const char* name):name(name) {};
+	void getName() const
 	{
-		this->name = "";
-	}
-	String(char* name)
-	{
-		this->name = name;
-		
-	}
-	void getName() 
-	{
-		std::cout << "String  = " << this->name << std::endl;
+		printf("String = %s\n", this->name);
 	}
 	bool checkString() 
 	{
-		if (this->name == "") return true;
+		if (this->name == nullptr) return true;
 		else return false;
 	}
+	String operator=(const char* name)
+	{
+		return (this->name = name);
+	}
+	/*bool operator==(const char* name)const
+	{
+		return(this->name == name);
+	}*/
 };
 #endif
