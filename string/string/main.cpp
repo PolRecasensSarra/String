@@ -4,22 +4,12 @@
 
 
 
-void main() {
-	String a;
-	String b("hello");
-	String c(b);
-	a.getName();
-	b.getName();
-	c.getName();
+int main() {
+	String a("hello");
+	String b(a);
 	
-	if (a.checkString())
-	{
-		c = "bye";
-		c.getName();
-	}
-	a = b;
-	printf("After a=b : ");
-	a.getName();
+	
 	
 	system("pause");
+	return 0;
 }
